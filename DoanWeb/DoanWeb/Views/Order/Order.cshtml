@@ -1,0 +1,136 @@
+﻿@model IEnumerable<DoanWeb.Models.OrderProduct>
+
+@{
+    ViewBag.Title = "Order";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Order information</h2>
+<div>
+    <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Birthday</th>
+                <th>Sex</th>
+                <th>Phone</th>
+                <th>Email</th>
+                <th>Address</th>
+                <th>Action</th>
+                <th>Role</th>
+
+            </tr>
+        </thead>
+
+        <tbody>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>@item.Customer_info.nameCustomer</td>
+                    <td>@item.Customer_info.birthCustomer</td>
+                    <td>@item.Customer_info.sexCustomer</td>
+                    <td>@item.Customer_info.phoneNumberCustomer</td>
+
+                    <td>@item.Customer_info.emailCustomer</td>
+                    <td>@item.Customer_info.addressCustomer</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>
+
+<h2>Thông tin đon hàng</h2>
+<div>
+    <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+        <thead>
+            <tr>
+                <th>Nam</th>
+                <th>Birthday</th>
+                <th>Sex</th>
+                <th>Phone</th>
+                <th>Email</th>
+                <th>Address</th>
+                <th>Action</th>
+                <th>Role</th>
+
+            </tr>
+        </thead>
+
+        <tbody>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>@item.Customer_info.nameCustomer</td>
+                    <td>@item.Customer_info.birthCustomer</td>
+                    <td>@item.Customer_info.sexCustomer</td>
+                    <td>@item.Customer_info.phoneNumberCustomer</td>
+
+                    <td>@item.Customer_info.emailCustomer</td>
+                    <td>@item.Customer_info.addressCustomer</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>
+
+@*<table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+    <thead>
+        <tr>
+            <th>Category</th>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Price</th>
+            <th>Model</th>
+            <th>Time</th>
+            <th>Origin</th>
+            <th>Decription</th>
+            <th>Image</th>
+            <th>Color</th>
+            <th>Seat</th>
+            <th>Fuel</th>
+            <th>Action</th>
+
+
+
+
+
+
+        </tr>
+    </thead>
+
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@item.createdDate</td>
+                <td>@item.Decription</td>
+                <td>@item.DetailOrders.</td>
+                <td>@item.priceProduct</td>
+
+                <td>@item.modelProduct</td>
+                <td>@item.timeProduction</td>
+                <td>@item.originProduct</td>
+                <td>@item.descriptionProduct</td>
+                <td>@item.urlImageProduct</td>
+
+                <td>@item.color</td>
+
+                <td>@item.seat</td>
+
+                <td>@item.fuel</td>
+
+                <td>
+                    @Html.ActionLink("Edit", "Edit", new { id = item.idProduct }) |
+                    @Html.ActionLink("Details", "Details", new { id = item.idProduct }) |
+                    @Html.ActionLink("Delete", "Delete", new { id = item.idProduct })
+
+                </td>
+
+            </tr>
+        }
+
+    </tbody>
+</table>*@
+
+
+
